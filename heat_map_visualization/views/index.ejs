@@ -63,6 +63,43 @@
           mapTypeId: 'roadmap'
         });
 
+        var csse_north = {lat:-31.977317, lng:115.816155};
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p> Red permissions:  50  ' + ' Yello permission: 50  ' + '  Ticket: 8:00am - 5:00pm Mon-Fri. </p>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker_parking= {
+          url: "./parking.png",
+          scaledSize: new google.maps.Size(30,30),
+          };
+
+       
+
+        var marker = new google.maps.Marker({
+          position: csse_north,
+          map: map,
+          title: 'CSSE north parking area',
+          icon: marker_parking
+        });
+
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        
+
+        
+      
+
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: getPoints(),
           map: map
@@ -115,14 +152,20 @@
           <% for ( var i =0; i<data.length; i++) {%>   //ejs variable and render's result
             
             point_obj= new google.maps.LatLng(<%=data[i].Lat%>,<%=data[i].Lng%>);
-            points.push(point_obj);  //let points collect all point_obk
+            points.push(point_obj);  //let points collect all point_obj
          
           <% } %>
          
           return  points;  //render it to the map
           
-        //];
+        
       }
+
+      //function getMarker(){
+      //    var csse_north = {lat:-31.977317, lng:115.816155};
+      //    var mker = new google.maps.Marker({position:csse_north,map:map});
+      //    return mker
+      //}
 
       
       

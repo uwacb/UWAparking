@@ -15,22 +15,28 @@ con.connect(function(err){
 });
 
 //sql statement execute
+//collect all User in out information
 var user_io = 'SELECT * FROM user_InOut';
 
-
-
+//if error then throw it
+// render result as data (json format)
 con.query(user_io, function(err, result){
 	if(err){
 		console.log('[query]-:'+err);
 	}else{
 		router.get('/', function (req, res, next){
+			console.log("query successfully");
 			res.render('index',{
-				title:"test json",
+				title:"test json", //test
 				data: result
 			});
+        console.log(result[10]);
 		});
 	}
+	con.end();
+	console.log("db connection closed")
 })
+
 
 
 
