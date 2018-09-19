@@ -33,8 +33,8 @@ con.query(user_io, function(err, result){
         console.log(result[10]);
 		});
 	}
-	con.de();
-	console.log("db connection closed")
+	con.end();
+	console.log("db connection closed");
 })
 
 
