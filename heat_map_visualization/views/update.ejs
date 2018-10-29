@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Admin management</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/custom-styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script>
+function check(){
+	var target_form= document.getElementById("updated_parking");
+	//for (var i=0; i<target_form.length;i++){
+	//   var element=target_form[i];
+	//   if (element.value==""){
+	//       alert("can not be empty");	       
+	//       break;
+	//   }
+	//   else{
+	   	target_form.submit();
+	//   }
+	//}
+//}	
+</script>
+
+
+
+</head>
+<body>
+<div id=wrapper>
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="list-group-item list-group-item-info"><a href="checking">Car parking</a></li>
+				<li class="list-group-item list-group-item-info"><a href="#">History</a></li>
+				<li class="list-group-item list-group-item-info"><a href="index">Heat-map</a></li> 
+			</ul>
+		</div>
+			<div id="page-content-wrapper">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+					<div class="col-12">
+
+						<h1>
+							Update existed parkinglots information
+						</h1>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+
+						
+					<div class="row justify-content-end">
+							<div class="col-2">
+							</div>
+
+							<div class="col-6">
+<table class="table">
+
+  
+  <tbody>
+    
+     <form action='/api/edit_submit'  method='get' id="updated_parking">
+
+     <tr>
+     <td>Parking lots name: &nbsp &nbsp<input type="text" name="p_name" value="Parkinglots name"/></td>
+     </tr>
+     <tr>
+      <td>Capacity(int): &nbsp &nbsp<input type="text" name="p_capacity" value="int"/></td>
+     </tr>
+      <td>Permission(Y/R): &nbsp &nbsp<input type="text" name="p_permmission" value="int,int"/></td>
+     <tr>
+      <!-- <td>Ticket: &nbsp &nbsp<input type="text" name="p_ticket" value="Yes/No"/></td> -->
+      <td>Ticket: &nbsp &nbsp<select name="p_ticket" ><option>--please select--</option><option value="Yes">Yes</option><option value="No">No</option></td>
+     </tr>
+    <tr>
+      <td>Coordinatory NW: &nbsp&nbsp  <input type="text" value="Lat,Lng" name="p_nw"/></td>
+    </tr>
+    <tr>
+      <td>Coordinatory NE: &nbsp&nbsp  <input type="text" value="Lat,Lng" name="p_ne"/></td>
+    </tr>
+    <tr>
+      <td>Coordinatory SE: &nbsp&nbsp  <input type="text" value="Lat,Lng" name="p_se"/></td>
+    </tr>
+    <tr>
+      <td>Coordinatory SW: &nbsp&nbsp  <input type="text" value="Lat,Lng" name="p_sw"/></td>
+    </tr>
+     <tr>
+      <td>Representative location: &nbsp&nbsp  <input type="text" value="Lat,Lng" name="p_rl"/></td>
+    </tr>
+    <tr>
+      <td><input type="hidden" value="<%= data[0].id %>" name="p_id"/></td>
+    </tr>
+   
+
+    <tr>
+      <td><button type="button" class="btn btn-primary" form="updated_parking" onclick="check()">Submit</button>&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" class="btn btn-primary" id="Reset">Reset</button></td>
+
+    </tr>
+ 
+    
+     
+     </form>
+    
+  
+  
+
+
+  </tbody>
+</table>
+							</div>
+
+							<div class="col-4">
+							
+							</div>
+
+					</div>
+						
+					</div>
+					</div>
+				</div>				
+			</div>
+		
+		</div>
+</body>
+</html>

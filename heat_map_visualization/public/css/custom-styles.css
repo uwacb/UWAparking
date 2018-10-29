@@ -1,0 +1,77 @@
+ .container{  
+width:100%;  
+min-width:1280px;  
+} 
+
+ .container-fluid{  
+width:100%;  
+min-width:1280px;  
+} 
+.container.login{
+//  background: #054bd1;
+  height: 70vh;
+}
+
+
+
+.container.login .row{
+//  background: #021d51;
+  height: 60vh;
+
+}
+
+.container.login .row> div > span{
+  font-family: Georgia;
+  font-size: 30px;
+}
+
+
+.container.login .row> div > ul > li{
+  font-family: Georgia;
+  font-size: 25px;
+}
+
+#sidebar-wrapper{
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  overflow-y: hidden;
+  background: #F0F8FF;
+  padding-bottom: 1350px;
+}
+
+#page-content-wrapper{
+  width:100%;
+  position: absolute;
+  padding: 50px;
+//  border: 5px solid gray;
+  padding-left: 280px;
+}
+
+
+.sidebar-nav{
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li{
+  text-indent: 50px;
+  line-height: 40px;
+  //background: #B8B8B8;
+}
+
+.sidebar-nav li a{
+  display: block;
+  text-decoration: none;
+  color: #003333;
+  font-size: 15px;
+  font-family: Georgia;
+
+}
+
+#timeDisplay{
+  position:absolute;
+  bottom:0px;
+  left:50px;
+}
