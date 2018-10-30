@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Please enter student number"
+        >
+    </EditText>
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Please enter password">
+    </EditText>
+    <EditText
+        android:id="@+id/et_repass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Please repeated enter password">
+    </EditText>
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Please enter email address">
+    </EditText>
+    <RadioGroup
+        android:id="@+id/rg_role"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_staff"
+            android:text="Staff"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_student"
+            android:text="Student"/>
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/rg_permission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_red"
+            android:text="Red"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_yellow"
+            android:text="Yellow"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/signin"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="sign in"
+        android:gravity="center"
+        android:onClick="signin">
+    </Button>
+    <Button
+        android:id="@+id/goback"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="go back"
+        android:gravity="center"
+        android:onClick="goback">
+    </Button>
+    <TextView
+        android:id="@+id/register_result"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="20dp">
+    </TextView>
+</LinearLayout>
